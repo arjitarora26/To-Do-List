@@ -66,4 +66,4 @@ function getParsed(x){
         tasks = JSON.parse(localStorage.getItem(x)); 
     }
     return tasks;
-}
+} 
