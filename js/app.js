@@ -24,7 +24,7 @@ function loadTasks(){
         taskList.appendChild(createTaskElement(task));
     });
 }
-
+/*Add Task to the list and local storage*/
 function addTask(e){
     e.preventDefault();
     if(taskInput.value.trim() ===''){
@@ -83,6 +83,7 @@ function createTaskElement(taskName){
     return li;
 }
 
+/*Remove task from the local storage and the list*/
 
 function removeTask(e){
     if(e.target.parentElement.classList.contains('delete-item'))
@@ -155,6 +156,7 @@ function animateRemoveTask(liBox,e){
 
 }
 
+/*removeAllTasks*/
 function clearTasks(){
     //    taskList.innerHTML="";
     if(!confirm('Remove all tasks?!!'))
@@ -165,6 +167,8 @@ function clearTasks(){
     }
     localStorage.removeItem('tasks');
 }
+
+/*Search tasks with substring*/
 
 function searchTasks(e){
     const searchTerm = e.target.value.toLowerCase();
